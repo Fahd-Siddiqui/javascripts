@@ -43,7 +43,7 @@ function calculate() {
       document.getElementById("EFAPI").innerHTML = result.EFAPI
 
       var eft = result.EFFT[0]
-      //document.getElementById("EFFT").innerHTML = eft
+      // document.getElementById("EFFT").innerHTML = eft
       plot_data[0]['y'] = eft;
       var plot_update = {
         y: [eft]
@@ -58,3 +58,49 @@ function calculate() {
     } // success
   }); // jquery.ajax
 } // calculate
+
+
+function setup_plot() {
+  plotly_plot = document.getElementById('plotly_plot');
+
+  var plot_data = [{
+    x: ["Oil", "Light Oil", "Wet Gas", "Dry Gas"],
+    y: [0, 0, 0, 0],
+    marker: {
+      color: '#dbdbdb'
+    },
+    type: 'bar',
+    width: .2
+  }];
+
+  var plot_layout = {
+    xaxis: {
+      zeroline: true,
+      linecolor: '#dbdbdb',
+      linewidth: 2,
+      showline: true,
+      tickfont: {
+        color: '#dbdbdb'
+      }
+    },
+    yaxis: {
+      range: [0, 100],
+      showgrid: false,
+      zeroline: false,
+      showline: false,
+      showticklabels: false,
+    },
+    width: 300,
+    height: 300,
+    paper_bgcolor: '#1b1b1b',
+    plot_bgcolor: '#1b1b1b',
+    margin: {
+      r: 5,
+      t: 50,
+      b: 25,
+      l: 5
+    },
+  }
+
+  Plotly.newPlot(plotly_plot, plot_data, plot_layout);
+} // setup_plot
