@@ -54,7 +54,13 @@ function calculate() {
           duration: 500,
           easing: 'cubic-in-out'
         }
-      })
+      }) //animate
+      
+     // Set up marker on map
+     L.marker().setLatLng([lat,long]).addTo(map)
+    .bindPopup('Bottom hole well location.')
+    .openPopup();
+      
     } // success
   }); // jquery.ajax
 } // calculate
