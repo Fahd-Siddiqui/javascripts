@@ -49,12 +49,12 @@ function calculate() {
         y: [eft]
       };
       //console.log();
-      // Plotly.animate(plotly_plot, plot_update, {
-      //   transition: {
-      //     duration: 500,
-      //     easing: 'cubic-in-out'
-      //   }
-      // })
+      Plotly.animate(plotly_plot, plot_update, {
+        transition: {
+          duration: 500,
+          easing: 'cubic-in-out'
+        }
+      })
     } // success
   }); // jquery.ajax
 } // calculate
