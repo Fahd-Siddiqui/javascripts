@@ -57,7 +57,7 @@ function calculate() {
       }) //animate
       
      // Set up marker on map
-     L.marker().setLatLng([lat,long]).addTo(map)
+     marker.setLatLng([lat,long])
     .bindPopup('Bottom hole well location.')
     .openPopup();
       
