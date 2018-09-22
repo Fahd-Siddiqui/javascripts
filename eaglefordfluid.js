@@ -43,7 +43,7 @@ function calculate() {
       document.getElementById("EFAPI").innerHTML = result.EFAPI
 
       var eft = result.EFFT[0]
-      document.getElementById("EFFT").innerHTML = eft
+      //document.getElementById("EFFT").innerHTML = eft
       plot_data[0]['y'] = eft;
       var plot_update = {
         y: [eft]
