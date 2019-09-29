@@ -37,9 +37,7 @@ function calculate() {
     type: 'POST',
     url: 'https://ohr93mkelj.execute-api.us-east-1.amazonaws.com/prod/eaglefordfluidpredict',
     data: '{ "lat" : "' + lat + '", "long" : "' + long + '", "tvd" : "' + tvd + '"}',
-    crossDomain: true,
-    dataType: 'jsonp',
-    //contentType: 'application/json; charset=utf-8',
+    contentType: 'application/json; charset=utf-8',
     dataType: 'json',
     success: function(result) {
       document.getElementById("EFAPI").innerHTML = result.EFAPI
