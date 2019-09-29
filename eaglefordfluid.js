@@ -35,7 +35,7 @@ function calculate() {
   // Send the POST request to server
   jQuery.ajax({
     type: 'POST',
-    url: 'http://ws.fahdsiddiqui.com:54662/eaglefordfluidpredict',
+    url: 'https://ohr93mkelj.execute-api.us-east-1.amazonaws.com/prod/eaglefordfluidpredict',
     data: '{ "lat" : "' + lat + '", "long" : "' + long + '", "tvd" : "' + tvd + '"}',
     contentType: 'application/json; charset=utf-8',
     dataType: 'json',
